@@ -3,15 +3,23 @@ var request = require('request');
 var csv = require('csv');
 var app = express();
 
+var validUrls = require('./whitelist');
+
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
     
-    // make sure it's a valid proxy url
-
     // intercept OPTIONS method
     if ('OPTIONS' == req.method) {
+    	
+	    // make sure it's a valid proxy url
+	    var url = getProxyUrl(req).replace(/.*:\/\//,'').replace(/\/.*/,'');
+	    if( validUrls.list.indexOf(url) == -1 ) {
+	    	console.log("Invalid proxy: "+url);
+	    	return res.send(403)
+	    }
+    	
       res.send(200);
     } else {
       next();
@@ -36,14 +44,19 @@ app.post('/export', function(req,res){
 	});
 });
 
-app.post('/proxy', function(req, res){
-	var body = req.body;
-	var url = req.originalUrl.split("?");
+app.post('/proxy', function(req, res){	
+    // make sure it's a valid proxy url
+    var url = getProxyUrl(req).replace(/.*:\/\//,'').replace(/\/.*/,'');
+    if( validUrls.list.indexOf(url) == -1 ) {
+    	console.log("Invalid proxy: "+url);
+    	return res.send(403)
+    }
 	
-	if( !body || url.length == 1 ) {
+	var body = req.body;
+	var url = getProxyUrl(req);
+    
+	if( !body || url.length == "" ) {
 		return res.send({error:true});
-	} else {
-		url = url[1];
 	}
 	
 	request.post(url, {form:body}, function (error, response, body) {
@@ -59,5 +72,13 @@ app.post('/proxy', function(req, res){
 	  
 	});
 });
+
+function getProxyUrl(req) {
+	var url = req.originalUrl.split("?");
+	
+	if( url.length == 1 ) return "";
+	return url[1]
+}
+
 
 app.listen(3000);
