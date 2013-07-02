@@ -1,0 +1,291 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the    -->
+<!-- browser's rendering engine into               -->
+<!-- "Standards Mode". Replacing this declaration  -->
+<!-- with a "Quirks Mode" doctype may lead to some -->
+<!-- differences in layout.                        -->
+
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script type="text/javascript" language="javascript" src="mfp/mfp.nocache.js"></script>
+        <script type="text/javascript" language="javascript">
+        var svr="http://atlas.resources.ca.gov/arcgis/rest/services";
+        
+        var usgs="http://wildfire.cr.usgs.gov/ArcGIS/rest/services";
+        var atlas="http://atlas.resources.ca.gov/arcgis/rest/services";
+        var cm="http://arcserve.lawr.ucdavis.edu/arcgis/rest/services/CalMAPPER";
+        
+        var mapConfig = {
+        		title: "MyFirePlan",
+        		//anchor: "GadgetPanel",
+        		zoom : 7,
+        		center : [-121.01, 38.22],
+        		selectedBasemap:"149a9bb14d604bd18f4597b21c19fac7",
+        		intersectLayers:[
+					{
+						label:"NAIP",
+						url:"http://atlas.resources.ca.gov/ArcGIS/rest/services/Boundaries/NAIP2010_Qauds/MapServer", 
+						visible:false,
+						opacity:1
+					},
+					{
+	            		label:"Incorporated Cities",
+	            		url:cm+"/Incorporated_Cities/MapServer", 
+	            		legendUrl:cm+"/Incorporated_Cities/MapServer/legend?f=json",
+	            		visible:false,
+	            		opacity:0.8
+	            	},
+	            	{
+	            		label : "County Boundries",
+	            		url   : "http://atlas.resources.ca.gov/ArcGIS/rest/services/Boundaries/CaCountyBound/MapServer",
+	            		visible:false,
+	            		opacity:0.8
+	            	}
+        		],
+        		basemaps: [
+        		],
+        		datalayers: [
+        		/*{
+        		label:"Terrestrial Ecosystems",
+        		url:usgs+"/ecosys_US/MapServer",  
+        		legendUrl:usgs+"/ecosys_US/MapServer/legend?f=json",
+        		visible:false,
+        		opacity:0.8
+        		},        		{
+            		label:"Current Natural Hazards",
+            		url:usgs+"/nhss_haz/MapServer", 
+            		legendUrl:usgs+"/nhss_haz/MapServer/legend?f=json",
+            		visible:false,
+            		opacity:0.8
+            		},
+            		{
+            		label:"National Weather Warnings",
+            		url:usgs+"/nhss_weat/MapServer", 
+            		legendUrl:usgs+"/nhss_weat/MapServer/legend?f=json",
+            		visible:false,
+            		opacity:0.8
+            		},
+            		{
+            		label:"GeoMac Fire Information",
+            		url:usgs+"/geomac_fires/MapServer", 
+            		legendUrl:usgs+"/geomac_fires/MapServer/legend?f=json",
+            		visible:false,
+            		opacity:0.8
+            		},
+            		{
+            		label:"Aspect",
+            		url:cm+"/Aspect/MapServer", 
+            		legendUrl:cm+"/Aspect/MapServer/legend?f=json",
+            		opacity:0.8,
+            		},
+            		{
+            		label:"Slope",
+            		url:cm+"/Slope/MapServer", 
+            		legendUrl:cm+"/Slope/MapServer/legend?f=json",
+            		opacity:0.8,
+            		},
+            		{
+            		label:"Elevation",
+            		url:cm+"/Elevation/MapServer", 
+            		legendUrl:cm+"/Elevation/MapServer/legend?f=json",
+            		opacity:0.8,
+            		},
+            		{
+            		label:"Communities",
+            		url:cm+"/Communities/MapServer", 
+            		legendUrl:cm+"/Communities/MapServer/legend?f=json",
+            		opacity:0.8,
+            		},
+            		{
+            		label:"Incorporated Cities",
+            		url:cm+"/Incorporated_Cities/MapServer", 
+            		legendUrl:cm+"/Incorporated_Cities/MapServer/legend?f=json",
+            		opacity:0.8,
+            		},
+            		{
+            		label:"Ownership",
+            		url:cm+"/Land_Ownership/MapServer", 
+            		legendUrl:cm+"/Land_Ownership/MapServer/legend?f=json",
+            		opacity:0.8,
+            		},
+            		{
+            		label:"Land Cover",
+            		url:atlas+"/Environment/CAML/MapServer",
+            		legendUrl:atlas+"/Environment/CAML/MapServer/legend?f=json",
+            		visible:false,
+            		opacity:0.3
+            		},
+            		{
+            		label:"Vegetation Types",
+            		url:cm+"/Vegetation_Types/MapServer", 
+            		legendUrl:cm+"/Vegetation_Types/MapServer/legend?f=json",
+            		opacity:0.8,
+            		},
+            		{
+            		label:"Times Burned",
+            		url:cm+"/Times_Burned/MapServer", 
+            		legendUrl:cm+"/Times_Burned/MapServer/legend?f=json",
+            		opacity:0.8,
+            		},*/
+
+            {
+            	label:"Vegetation Fires",
+            	url:cm+"/Vegetation_Fires/MapServer",
+            	legendUrl:cm+"/Vegetation_Fires/MapServer/legend?f=json",
+            	},
+            	{
+            	label:"Prescribed Fires",
+            	url:cm+"/Prescribed_Fires/MapServer", 
+            	legendUrl:cm+"Prescribed_Fires/MapServer/legend?f=json", 
+            	opacity:0.8,
+            	},
+            	{
+            	label:"Wildfires",
+            	url:cm+"/Wildfires/MapServer", 
+            	legendUrl:cm+"/Wildfires/MapServer/legend?f=json",
+            	opacity:0.8,
+            	},
+            	{
+            	label:"All Fires",
+            	url:cm+"/All_Fires/MapServer", 
+            	legendUrl:cm+"/All_Fires/MapServer/legend?f=json",
+            	opacity:0.8,
+            	},
+            	{
+            	label:"SRA",
+            	url:cm+"/SRA/MapServer", 
+            	legendUrl:cm+"/SRA/MapServer/legend?f=json",
+            	opacity:0.8,
+            	},
+            	{
+            	label:"Fire History",
+            	url:atlas+"/GeoScience/California_Fire_History/MapServer",
+            	legendUrl:atlas+"/GeoScience/California_Fire_History/MapServer/legend?f=json",
+            	showLegendOnLoad:false,
+            	visible:false,
+            	opacity:0.8
+            	},
+            	{
+            	label:"Fire Threat",
+            	url:atlas+"/GeoScience/Fire_Threat/MapServer",
+            	legendUrl:atlas+"/GeoScience/Fire_Threat/MapServer/legend?f=json",
+            	showLegendOnLoad:false,
+            	visible:false,
+            	opacity:0.8
+            	},
+            	{
+            	label:"WUI",
+            	url:atlas+"/GeoScience/Wildland_Urban_Interface_Fire_Threat/MapServer",
+            	legendUrl:atlas+"/GeoScience/Wildland_Urban_Interface_Fire_Threat/MapServer/legend?f=json",
+            	showLegendOnLoad:false,
+            	visible:false,
+            	opacity:0.8
+            	},
+            	{
+            	label: "Fire Severity Zone",
+            	url: atlas+"/GeoScience/Fire_Severity_Zone/MapServer", 
+            	legendUrl: atlas+"/GeoScience/Fire_Severity_Zone/MapServer/legend?f=json",
+            	showLegendOnLoad:true,
+            	visible: true,
+            	transparency: 80
+            	}
+
+        	],
+
+        	exportImageUrl: "http://export.myplan.casil.ucdavis.edu/cgi-bin/generateImage64.py",
+        	cloudStoreUrl: "http://mapstore.casil.ucdavis.edu",
+        	cloudGetUrl: "http://mapstore.casil.ucdavis.edu/cgi-bin/rest.py",
+        	proxy : "http://localhost:3000/proxy",
+        	 
+        	provider: {
+        	 icon: "",
+        	 popup: "This <b>myFirePlan</b> application is a collaborative effort between <a href='http://www.fire.ca.gov'>CalFire</a>,"+
+        	 "<a href='http://www.calema.ca.gov'>CalEMA</a>, and "+
+        	 "California's Natural Resources Agency's <a href='http://www.ceres.ca.gov'>CERES</a> program",
+        	 url: ""
+        	},
+        	
+        	geometryServer: atlas+"/Geometry/GeometryServer",
+        	queryTool: true
+        	}
+        
+        /*var mapConfig = {
+        zoom : 7,
+        center : [-121.01, 38.22],
+        anchor : "anchor",
+        basemaps: [
+        	
+        ],
+        datalayers: [
+	{ label: "Flood/CA specific", 
+	   url: svr.concat("/GeoScience/Flood_Risk_State/MapServer"),
+	   legendUrl: svr.concat("/GeoScience/Flood_Risk_State/MapServer/legend?f=json"),
+               visible: true,
+               transparency : 80
+      },
+	  { label: "Fire Severity Zone",
+	    url: svr.concat("/GeoScience/Fire_Severity_Zone/MapServer"),
+	    legendUrl: svr.concat("/GeoScience/Fire_Severity_Zone/MapServer/legend?f=json"),
+               visible: false,
+               transparency: 80
+      }
+        ],
+        
+        exportImageUrl: "http://export.myplan.casil.ucdavis.edu/cgi-bin/generateImage64.py",
+        cloudStoreUrl: "http://mapstore.casil.ucdavis.edu",
+        cloudGetUrl: "http://mapstore.casil.ucdavis.edu/cgi-bin/rest.py",
+        
+        provider: {
+         icon: "",
+         popup: "This is the map search interface for Cal-Atlas",
+         url: "http://atlas.ca.gov"
+        },
+        //geocoder: "google";
+       
+        geocoderBias: "california",
+        geometryServer: "http://myplan.casil.ucdavis.edu/ArcGIS/rest/services/Geometry/GeometryServer",
+     
+       	//gMapsKey:"ABQIAAAAKMh-MLKs8k9ehw0smA47PhS-E7vKUp85R137eYcPd0BB_ZnybhSU7j5oox5zlMorKhBn1NK3-xNreQ",
+        title: "Cal-Atlas Maps",
+        
+        queryTool: true
+    }*/
+        
+        
+        
+     </script>
+
+  </head>
+
+  <!--                                           -->
+  <!-- The body can have arbitrary html, or      -->
+  <!-- you can leave the body empty if you want  -->
+  <!-- to create a completely dynamic UI.        -->
+  <!--                                           -->
+  <body class="claro" style="overflow:hidden">
+
+    <!-- OPTIONAL: include this if you want history support -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+    
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+    
+       <!--                                           -->
+    <!-- This script loads your compiled module.   -->
+    <!-- If you add any GWT meta tags, they must   -->
+    <!-- be added before this line.                -->
+    <!--                                           -->
+
+    
+<!--  <div id="anchor" style="margin:10px;height:600px;position:relative"></div> -->
+
+  </body>
+</html>

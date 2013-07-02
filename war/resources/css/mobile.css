@@ -1,0 +1,196 @@
+
+
+html, body, div, span, ul, li, h1, h2, a
+{
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial;
+	font-size: 13px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+	list-style: none;
+	border: none;
+}
+
+body
+{
+	background-color: #4D97C7;
+}
+
+.mobile_view
+{
+	margin: 12px;
+	background-color: #005B8A;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;	
+	
+	-moz-box-shadow: 	0px 2px 2px 2px #333333;
+	-webkit-box-shadow: 0px 2px 2px 2px #333333;
+	box-shadow: 		0px 2px 2px 2px #333333;
+	
+}
+
+h1
+{
+	color: #FFFFFF;
+	text-shadow: #333333 1px 1px;
+}
+
+#home h1
+{
+	padding: 60px 10px 10px 10px;
+}
+
+#home h1 span
+{
+	color: inherit;
+	font-weight: normal;
+}
+
+#home #map_canvas1, #home #map_canvas2
+{
+	height: 200px;	
+}
+
+#second #map_canvas
+{
+	height: 400px;	
+}
+
+ul
+{
+	margin: 0px 5px;
+}
+
+ul li
+{
+	background-color: #FFFFFF;
+	border-bottom-color: #CCCCCC;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+ul li h2
+{
+	display: block;
+	padding: 6px 15px;
+	background-color: #F0F0F0;
+}
+
+.nav li a, .details li a, #home ul li .nav
+{
+	display: block;
+	font-weight: normal;
+}
+
+.nav li a, #home ul li .nav
+{
+	padding: 25px 15px;	
+}
+
+.details li a
+{
+	padding: 10px 15px;
+}
+
+.map
+{
+	padding: 10px;
+}
+
+.map_header
+{
+	background-color: #FFFB8C;
+	
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;	
+}
+
+.map_footer
+{
+	background-color: #eBF2FC;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.map_header, .map_footer	
+{
+	padding: 5px;
+	border-top-color: #FFF;
+	border-top-style: solid;
+	border-top-width: 1px;
+	font-weight: normal;
+}
+
+.map .map_footer a
+{
+	display: block;
+	font-weight: normal;
+}
+
+#second .map_footer
+{
+	text-align: center;
+}
+
+#second ul li h2
+{
+	text-align: center;
+}
+
+#second .header
+{
+	text-align: center;
+	padding: 15px 0px;
+}
+
+#second .header a
+{
+	color: #FFFFFF;
+	padding: 0px 25px;	
+}
+
+#home .location
+{
+	position: absolute;
+	color: #B5E5F4;
+	right: 12px;
+	top: 0px;
+	background-color: #012B41;
+	padding: 5px 15px;
+	
+	-webkit-border-top-right-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+#home .logo
+{
+	position: absolute;
+	left: 25px;
+	top: 10px;
+}
+
+.footer
+{
+	display: block;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 15px;
+}
+
+.null
+{
+	height: 65px;
+}

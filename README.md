@@ -1,4 +1,4 @@
-my-fire-plan
-============
+ceres-maps
+==========
 
-MyFirePlan src
+Ceres Map.  Built using gwt-esri and gwt-gis

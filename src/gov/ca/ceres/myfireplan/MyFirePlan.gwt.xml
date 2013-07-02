@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='mfp'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name='edu.ucdavis.gwt.gis.GwtGis' />
+  <inherits name='com.google.maps.gwt.GoogleMaps' />
+  <!-- <inherits name='gov.ca.ceres.thesaurustools.ThesaurusTools'/> -->
+
+<!-- 
+ <add-linker name="xs" />
+  -->
+
+  <!-- Other module inherits                                      -->
+  <stylesheet src="MyFirePlan.css" /> 
+  <stylesheet src="idangerous.swiper.css" /> 
+  <script src="idangerous.swiper-1.9.min.js"></script>
+  <script src="jquery.esriPreview.js"></script>
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='gov.ca.ceres.myfireplan.client.MyFirePlan'/>
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+
+</module>
