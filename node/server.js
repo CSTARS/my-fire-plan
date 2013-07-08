@@ -2,6 +2,7 @@ var express = require('express');
 var request = require('request');
 var csv = require('csv');
 var app = express();
+var drive = require('./drive');
 
 var validUrls = require('./whitelist');
 
@@ -29,7 +30,10 @@ var allowCrossDomain = function(req, res, next) {
 app.configure(function () {
   app.use(allowCrossDomain);
   app.use(express.bodyParser());
+  app.use(express.cookieParser());
   app.use(express.methodOverride());
+  app.use(express.session({secret: '1234567890QWERTY'}));
+  drive.configure(app);
   app.use(app.router);
 });
 
@@ -72,6 +76,8 @@ app.post('/proxy', function(req, res){
 	  
 	});
 });
+
+drive.init();
 
 function getProxyUrl(req) {
 	var url = req.originalUrl.split("?");

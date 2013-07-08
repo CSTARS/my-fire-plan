@@ -1,0 +1,143 @@
+<html>
+<head>
+	<title>Testing google drive setup</title>
+	<script type="text/javascript">
+	
+	var token = null;
+	var MIME_TYPE = "application/vnd.gwt-gis.map";
+	var MAPS_FOLDER = "MyFirePlan-SavedMaps";
+	
+	// every 5min check to see if the user token will expire in the next 20min
+	// if so reload token
+	setInterval(function(){	
+		// no token set
+		if( token == null ) return;
+		
+		// if token is expiring in less the 20min
+		if( ((parseInt(token.expires_at)*1000) - new Date().getTime()) < 1000*60*20 ) {
+			console.log("updating user token");
+			_signin(true, _userAuthed);
+		}
+	}, 1000*60*5);
+	
+	function init() {
+		//gapi.client.setApiKey("AIzaSyA1encZjogxMHl3cALt-pBQOy6fo0ooPBs");
+		//gapi.client.load('oauth2', 'v2', function(){
+			
+		//});
+		_signin(false, _userAuthed);
+	}
+	
+	function _signin(mode, callback) {
+		  gapi.auth.authorize({client_id: '277357850264-kis7hl02mapip01ooijiqqq44pogu46m.apps.googleusercontent.com',
+			    scope: ['https://www.googleapis.com/auth/drive'], immediate: mode},
+			    callback);
+	}
+	
+	function _userAuthed() {
+		  token = gapi.auth.getToken();
+			
+	      gapi.client.load('drive', 'v2', function(){
+	    	  _onLogin();
+	      });
+	}
+	
+	function _onLogin() {
+		ready();
+	}
+	
+	function ready() {
+		var request = gapi.client.drive.files.list({q: "mimeType = '"+MIME_TYPE+"'"});
+		request.execute(function(resp) {
+	      console.log(resp.items);
+	    });
+	
+		checkFolder();
+	}
+	
+	function checkFolder() {
+		console.log("checking folder");
+		gapi.client.drive.files
+			.list({
+				q: "title = '"+MAPS_FOLDER+"' and mimeType = 'application/vnd.google-apps.folder'"
+			})
+			.execute(function(resp) {
+	      		if( resp.items.length > 0 ) {
+	      			saveMap(resp.items[0].id);
+	      		} else {
+	      			createFolder();
+	      		}
+	    	});
+	}
+	
+	function createFolder() {
+		consoel.log("creating folder");
+		gapi.client.drive.files
+			.insert({
+	    		title: MAPS_FOLDER,
+	            mimeType: 'application/vnd.google-apps.folder'
+	    	})
+	    	.execute(function(resp){
+	    		saveMap(resp.id);
+	    	});
+	}
+	
+	function saveMap(id) {
+		console.log("Saving map to: "+id);
+		var boundary = '-------314159265358979323846';
+		var delimiter = "\r\n--" + boundary + "\r\n";
+		var close_delim = "\r\n--" + boundary + "--";
+
+	    var metadata = {
+	      'title': "Test 2",
+	      'mimeType': MIME_TYPE,
+	      parents : [{id: id}]
+	    };
+	    
+	    var map = {
+	    		title : "this is a test",
+	    		center : {
+	    			lat : 22,
+	    			lng : 101.1
+	    		},
+	    		description : "here it is"
+	    }
+
+	    var base64Data = btoa(JSON.stringify(map));
+	    var multipartRequestBody =
+	        delimiter +
+	        'Content-Type: application/json\r\n\r\n' +
+	        JSON.stringify(metadata) +
+	        delimiter +
+	        'Content-Type: ' + MIME_TYPE + '\r\n' +
+	        'Content-Transfer-Encoding: base64\r\n' +
+	        '\r\n' +
+	        base64Data +
+	        close_delim;
+	    
+	    console.log(multipartRequestBody);
+
+	    var request = gapi.client.request({
+	        'path': '/upload/drive/v2/files',
+	        'method': 'POST',
+	        'params': {'uploadType': 'multipart'},
+	        'headers': {
+	          'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
+	        },
+	        'body': multipartRequestBody});
+	    
+	    request.execute(function(resp){
+	    	console.log(resp);
+	    });
+	}
+	
+	
+	</script>
+	<script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+</head>
+<body>
+<div id="list"></div>
+
+</body>
+</html>

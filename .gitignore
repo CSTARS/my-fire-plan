@@ -1,2 +1,6 @@
 gwt-unitCache
 war/WEB-INF
+war/gwt-unitCache
+war/mfp
+node/node_modules
+bin
