@@ -4,3 +4,4 @@ war/gwt-unitCache
 war/mfp
 node/node_modules
 bin
+war/WEB-INF/deploy
