@@ -77,7 +77,32 @@ app.post('/proxy', function(req, res){
 	});
 });
 
-drive.init();
+// currently there is no way to let a non-loggedin user to access a public map via xhr...
+// using this proxy for now
+app.get('/loadPublicMap', function(req, res) {
+	var url = req.query.url;
+	
+	if( !url ) return res.send({error:true,message:"no download link provided"});
+	
+	var host = url.replace(/^https:\/\//,'').split("/")[0];
+	if( !url.match(/.*docs.google\.com/ ) ) return res.send({error:true,message:"invalid link"});
+	
+	request.get(url, function (error, response, body) {
+		
+	  if (!error && response.statusCode == 200) {
+		  try {
+			  res.send(JSON.parse(body));
+		  } catch (e) {
+			  res.send({error:true,message:"json format error"});
+		  }
+	  } else {
+		res.send(error);
+	  }
+	  
+	});
+	
+});
+
 
 function getProxyUrl(req) {
 	var url = req.originalUrl.split("?");
