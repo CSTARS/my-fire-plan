@@ -6,6 +6,11 @@ var drive = require('./drive');
 
 var validUrls = require('./whitelist');
 
+process.on('uncaughtException', function(err) {
+    // handle the error safely
+    console.log(err);
+});
+
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
@@ -31,6 +36,7 @@ app.configure(function () {
   app.use(allowCrossDomain);
   app.use(express.bodyParser());
   app.use(express.cookieParser());
+  app.use(express.logger());
   app.use(express.methodOverride());
   app.use(express.session({secret: '1234567890QWERTY'}));
   drive.configure(app);
