@@ -5,9 +5,7 @@ import edu.ucdavis.gwt.gis.client.GisClient.GisClientLoadHandler;
 import edu.ucdavis.gwt.gis.client.layers.DataLayer;
 import edu.ucdavis.gwt.gis.client.layout.LayerMenuCreateHandler;
 import edu.ucdavis.gwt.gis.client.layout.LayerMenuItem;
-import edu.ucdavis.gwt.gis.client.toolbar.Toolbar;
 import edu.ucdavis.gwt.gis.client.toolbar.button.AddFeaturesButton;
-import edu.ucdavis.gwt.gis.client.toolbar.button.ToolbarItem;
 import edu.ucdavis.gwt.gis.client.toolbar.menu.AddLayerMenu;
 import edu.ucdavis.gwt.gis.client.toolbar.menu.BasemapMenu;
 import edu.ucdavis.gwt.gis.client.toolbar.menu.ExportMenu;
@@ -54,7 +52,6 @@ public class MyFirePlan implements EntryPoint {
 
 		mapClient = new GisClient();
 		
-		
 		mapClient.load(new GisClientLoadHandler(){
 			@Override
 			public void onLoad() {
@@ -62,6 +59,7 @@ public class MyFirePlan implements EntryPoint {
 			}
 		});
 
+		
 	}
 	
 
@@ -69,23 +67,22 @@ public class MyFirePlan implements EntryPoint {
 	public void onClientReady() {
 
 		mapClient.getToolbar().addToolbarMenu(new BasemapMenu());
-		
+
 		QueryMenu queryMenu = new QueryMenu();
 		queryMenu.addItem(IntersectTool.BUTTON);
 		mapClient.getToolbar().addToolbarMenu(queryMenu);
-		
+
 		addLayerMenu = new AddLayerMenu();
 		mapClient.getToolbar().addToolbarMenu(addLayerMenu);
 		addLayerMenu.addItem(new AddFeaturesButton());
 		mapClient.getToolbar().addToolbarMenu(new SaveLoadMenu());
 		mapClient.getToolbar().addToolbarMenu(new ExportMenu());
 		mapClient.getToolbar().addToolbarMenu(new HelpMenu());
-		
 
 		if( GisClient.isIE7() || GisClient.isIE8() ) {
 			mapClient.getRootPanel().getElement().getStyle().setProperty("border", "1px solid #aaaaaa");
 		}
-		
+
 	}
 
 	private class BrowseMenuItem extends LayerMenuItem {
