@@ -2,7 +2,6 @@ var express = require('express');
 var request = require('request');
 var csv = require('csv');
 var app = express();
-var drive = require('./drive');
 
 var validUrls = require('./whitelist');
 
@@ -41,7 +40,6 @@ app.configure(function () {
   app.use(express.logger());
   app.use(express.methodOverride());
   app.use(express.session({secret: '1234567890QWERTY'}));
-  drive.configure(app);
   app.use(app.router);
 });
 

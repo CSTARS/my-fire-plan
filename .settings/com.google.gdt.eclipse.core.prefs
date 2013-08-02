@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
-launchConfigExternalUrlPrefix=
+jarsExcludedFromWebInfLib=
+warSrcDir=war
+warSrcDirIsOutput=true

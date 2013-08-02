@@ -6,9 +6,9 @@
   <inherits name='com.google.maps.gwt.GoogleMaps' />
   <!-- <inherits name='gov.ca.ceres.thesaurustools.ThesaurusTools'/> -->
 
-<!--   -->
+<!-- 
  <add-linker name="xs" />
-
+   -->
 
   <!-- Other module inherits                                      -->
   <stylesheet src="MyFirePlan.css" /> 

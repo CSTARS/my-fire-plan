@@ -12,7 +12,6 @@ import edu.ucdavis.gwt.gis.client.toolbar.menu.ExportMenu;
 import edu.ucdavis.gwt.gis.client.toolbar.menu.HelpMenu;
 import edu.ucdavis.gwt.gis.client.toolbar.menu.QueryMenu;
 import edu.ucdavis.gwt.gis.client.toolbar.menu.SaveLoadMenu;
-import gov.ca.ceres.myfireplan.client.intersect.IntersectTool;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -69,7 +68,6 @@ public class MyFirePlan implements EntryPoint {
 		mapClient.getToolbar().addToolbarMenu(new BasemapMenu());
 
 		QueryMenu queryMenu = new QueryMenu();
-		queryMenu.addItem(IntersectTool.BUTTON);
 		mapClient.getToolbar().addToolbarMenu(queryMenu);
 
 		addLayerMenu = new AddLayerMenu();
