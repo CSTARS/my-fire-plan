@@ -5,3 +5,4 @@ war/mfp
 node/node_modules
 bin
 war/WEB-INF/deploy
+war/WEB-INF/classes

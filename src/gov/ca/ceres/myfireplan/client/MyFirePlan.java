@@ -14,6 +14,7 @@ import edu.ucdavis.gwt.gis.client.toolbar.menu.QueryMenu;
 import edu.ucdavis.gwt.gis.client.toolbar.menu.SaveLoadMenu;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class MyFirePlan implements EntryPoint {
@@ -81,6 +82,15 @@ public class MyFirePlan implements EntryPoint {
 			mapClient.getRootPanel().getElement().getStyle().setProperty("border", "1px solid #aaaaaa");
 		}
 
+		mapClient.updateAppSize(true);
+		
+		new Timer() {
+			@Override
+			public void run() {
+				mapClient.updateAppSize(true);
+			}
+		}.schedule(10000);
+		
 	}
 
 	private class BrowseMenuItem extends LayerMenuItem {

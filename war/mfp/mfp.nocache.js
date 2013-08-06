@@ -1,21 +1,20 @@
 function mfp(){
-  var $intern_0 = '', $intern_99 = '\n-', $intern_36 = '" for "gwt:onLoadErrorFn"', $intern_34 = '" for "gwt:onPropertyErrorFn"', $intern_86 = '"<script src=\\"', $intern_21 = '"><\/script>', $intern_10 = '#', $intern_98 = ');', $intern_90 = '-\n', $intern_100 = '-><\/scr', $intern_87 = '.cache.js\\"><\/scr" + "ipt>"', $intern_12 = '/', $intern_24 = '//', $intern_51 = '00C0039F2EE6F7365FF39876B83AADA3', $intern_52 = '6BCB93869086FD68D82E6144B607048F', $intern_53 = '783F4293F1661529E90918F9414C2F05', $intern_57 = ':', $intern_28 = '::', $intern_88 = '<scr', $intern_20 = '<script id="', $intern_74 = '<script language="javascript" src="', $intern_77 = '<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><\/script>', $intern_79 = '<script language="javascript" src="https://apis.google.com/js/client.js?onload=ginit"><\/script>', $intern_31 = '=', $intern_11 = '?', $intern_54 = 'BD65AD7D2B5BAF910DF84E4D8C912AD4', $intern_33 = 'Bad handler "', $intern_55 = 'C331167613D6D94A1D7B7DA12AE71AB4', $intern_56 = 'C9DD5EA89F6A2B77EFE547ACC8BD5093', $intern_48 = 'Cross-site hosted mode not yet implemented. See issue ', $intern_71 = 'DOMContentLoaded', $intern_65 = 'GwtGisClient.css', $intern_69 = 'MyFirePlan.css', $intern_22 = 'SCRIPT', $intern_19 = '__gwt_marker_mfp', $intern_23 = 'base', $intern_15 = 'baseUrl', $intern_4 = 'begin', $intern_3 = 'bootstrap', $intern_14 = 'clear.cache.gif', $intern_30 = 'content', $intern_67 = 'css/bootstrap-responsive.min.css', $intern_66 = 'css/bootstrap.min.css', $intern_68 = 'css/font-awesome.css', $intern_97 = 'document.write(', $intern_9 = 'end', $intern_93 = 'evtGroup: "loadExternalRefs", millis:(new Date()).getTime(),', $intern_95 = 'evtGroup: "moduleStartup", millis:(new Date()).getTime(),', $intern_45 = 'gecko', $intern_46 = 'gecko1_8', $intern_5 = 'gwt.codesvr=', $intern_6 = 'gwt.hosted=', $intern_7 = 'gwt.hybrid', $intern_35 = 'gwt:onLoadErrorFn', $intern_32 = 'gwt:onPropertyErrorFn', $intern_29 = 'gwt:property', $intern_63 = 'head', $intern_62 = 'href', $intern_76 = 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', $intern_49 = 'http://code.google.com/p/google-web-toolkit/issues/detail?id=2079', $intern_58 = 'http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/dojo/dijit/themes/claro/claro.css', $intern_64 = 'http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/esri/css/esri.css', $intern_78 = 'https://apis.google.com/js/client.js?onload=ginit', $intern_82 = 'idangerous.swiper-1.9.min.js', $intern_83 = 'idangerous.swiper-1.9.min.js"><\/script>', $intern_70 = 'idangerous.swiper.css', $intern_44 = 'ie6', $intern_43 = 'ie8', $intern_42 = 'ie9', $intern_13 = 'img', $intern_101 = 'ipt>', $intern_89 = 'ipt><!-', $intern_84 = 'jquery.esriPreview.js', $intern_85 = 'jquery.esriPreview.js"><\/script>', $intern_80 = 'js/bootstrap.min.js', $intern_81 = 'js/bootstrap.min.js"><\/script>', $intern_73 = 'js/esri_3_4_patch.js', $intern_75 = 'js/esri_3_4_patch.js"><\/script>', $intern_59 = 'link', $intern_72 = 'loadExternalRefs', $intern_25 = 'meta', $intern_1 = 'mfp', $intern_17 = 'mfp.nocache.js', $intern_27 = 'mfp::', $intern_92 = 'moduleName:"mfp", sessionId:window.__gwtStatsSessionId, subSystem:"startup",', $intern_8 = 'moduleStartup', $intern_41 = 'msie', $intern_26 = 'name', $intern_38 = 'opera', $intern_60 = 'rel', $intern_40 = 'safari', $intern_16 = 'script', $intern_50 = 'selectingPermutation', $intern_2 = 'startup', $intern_61 = 'stylesheet', $intern_94 = 'type: "end"});', $intern_96 = 'type: "moduleRequested"});', $intern_18 = 'undefined', $intern_47 = 'unknown', $intern_37 = 'user.agent', $intern_39 = 'webkit', $intern_91 = 'window.__gwtStatsEvent && window.__gwtStatsEvent({';
-  var $wnd = window, $doc = document, $stats = $wnd.__gwtStatsEvent?function(a){
-    return $wnd.__gwtStatsEvent(a);
+  var $wnd_0 = window, $doc_0 = document, $stats = $wnd_0.__gwtStatsEvent?function(a){
+    return $wnd_0.__gwtStatsEvent(a);
   }
-  :null, $sessionId = $wnd.__gwtStatsSessionId?$wnd.__gwtStatsSessionId:null, gwtOnLoad, bodyDone, base = $intern_0, metaProps = {}, values = [], providers = [], answers = [], softPermutationId = 0, onLoadErrorFunc, propertyErrorFunc;
-  $stats && $stats({moduleName:$intern_1, sessionId:$sessionId, subSystem:$intern_2, evtGroup:$intern_3, millis:(new Date).getTime(), type:$intern_4});
-  if (!$wnd.__gwt_stylesLoaded) {
-    $wnd.__gwt_stylesLoaded = {};
+  :null, $sessionId_0 = $wnd_0.__gwtStatsSessionId?$wnd_0.__gwtStatsSessionId:null, gwtOnLoad, bodyDone, base = '', metaProps = {}, values = [], providers = [], answers = [], softPermutationId = 0, onLoadErrorFunc, propertyErrorFunc;
+  $stats && $stats({moduleName:'mfp', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'begin'});
+  if (!$wnd_0.__gwt_stylesLoaded) {
+    $wnd_0.__gwt_stylesLoaded = {};
   }
-  if (!$wnd.__gwt_scriptsLoaded) {
-    $wnd.__gwt_scriptsLoaded = {};
+  if (!$wnd_0.__gwt_scriptsLoaded) {
+    $wnd_0.__gwt_scriptsLoaded = {};
   }
   function isHostedMode(){
     var result = false;
     try {
-      var query = $wnd.location.search;
-      return (query.indexOf($intern_5) != -1 || (query.indexOf($intern_6) != -1 || $wnd.external && $wnd.external.gwtOnLoad)) && query.indexOf($intern_7) == -1;
+      var query = $wnd_0.location.search;
+      return (query.indexOf('gwt.codesvr=') != -1 || (query.indexOf('gwt.hosted=') != -1 || $wnd_0.external && $wnd_0.external.gwtOnLoad)) && query.indexOf('gwt.hybrid') == -1;
     }
      catch (e) {
     }
@@ -28,63 +27,63 @@ function mfp(){
 
   function maybeStartModule(){
     if (gwtOnLoad && bodyDone) {
-      gwtOnLoad(onLoadErrorFunc, $intern_1, base, softPermutationId);
-      $stats && $stats({moduleName:$intern_1, sessionId:$sessionId, subSystem:$intern_2, evtGroup:$intern_8, millis:(new Date).getTime(), type:$intern_9});
+      gwtOnLoad(onLoadErrorFunc, 'mfp', base, softPermutationId);
+      $stats && $stats({moduleName:'mfp', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'moduleStartup', millis:(new Date).getTime(), type:'end'});
     }
   }
 
   function computeScriptBase(){
     function getDirectoryOfFile(path){
-      var hashIndex = path.lastIndexOf($intern_10);
+      var hashIndex = path.lastIndexOf('#');
       if (hashIndex == -1) {
         hashIndex = path.length;
       }
-      var queryIndex = path.indexOf($intern_11);
+      var queryIndex = path.indexOf('?');
       if (queryIndex == -1) {
         queryIndex = path.length;
       }
-      var slashIndex = path.lastIndexOf($intern_12, Math.min(queryIndex, hashIndex));
-      return slashIndex >= 0?path.substring(0, slashIndex + 1):$intern_0;
+      var slashIndex = path.lastIndexOf('/', Math.min(queryIndex, hashIndex));
+      return slashIndex >= 0?path.substring(0, slashIndex + 1):'';
     }
 
     function ensureAbsoluteUrl(url){
       if (url.match(/^\w+:\/\//)) {
       }
        else {
-        var img = $doc.createElement($intern_13);
-        img.src = url + $intern_14;
+        var img = $doc_0.createElement('img');
+        img.src = url + 'clear.cache.gif';
         url = getDirectoryOfFile(img.src);
       }
       return url;
     }
 
     function tryMetaTag(){
-      var metaVal = __gwt_getMetaProperty($intern_15);
+      var metaVal = __gwt_getMetaProperty('baseUrl');
       if (metaVal != null) {
         return metaVal;
       }
-      return $intern_0;
+      return '';
     }
 
     function tryNocacheJsTag(){
-      var scriptTags = $doc.getElementsByTagName($intern_16);
+      var scriptTags = $doc_0.getElementsByTagName('script');
       for (var i = 0; i < scriptTags.length; ++i) {
-        if (scriptTags[i].src.indexOf($intern_17) != -1) {
+        if (scriptTags[i].src.indexOf('mfp.nocache.js') != -1) {
           return getDirectoryOfFile(scriptTags[i].src);
         }
       }
-      return $intern_0;
+      return '';
     }
 
     function tryMarkerScript(){
       var thisScript;
-      if (typeof isBodyLoaded == $intern_18 || !isBodyLoaded()) {
-        var markerId = $intern_19;
+      if (typeof isBodyLoaded == 'undefined' || !isBodyLoaded()) {
+        var markerId = '__gwt_marker_mfp';
         var markerScript;
-        $doc.write($intern_20 + markerId + $intern_21);
-        markerScript = $doc.getElementById(markerId);
+        $doc_0.write('<script id="' + markerId + '"><\/script>');
+        markerScript = $doc_0.getElementById(markerId);
         thisScript = markerScript && markerScript.previousSibling;
-        while (thisScript && thisScript.tagName != $intern_22) {
+        while (thisScript && thisScript.tagName != 'SCRIPT') {
           thisScript = thisScript.previousSibling;
         }
         if (markerScript) {
@@ -94,34 +93,34 @@ function mfp(){
           return getDirectoryOfFile(thisScript.src);
         }
       }
-      return $intern_0;
+      return '';
     }
 
     function tryBaseTag(){
-      var baseElements = $doc.getElementsByTagName($intern_23);
+      var baseElements = $doc_0.getElementsByTagName('base');
       if (baseElements.length > 0) {
         return baseElements[baseElements.length - 1].href;
       }
-      return $intern_0;
+      return '';
     }
 
     function isLocationOk(){
-      var loc = $doc.location;
-      return loc.href == loc.protocol + $intern_24 + loc.host + loc.pathname + loc.search + loc.hash;
+      var loc = $doc_0.location;
+      return loc.href == loc.protocol + '//' + loc.host + loc.pathname + loc.search + loc.hash;
     }
 
     var tempBase = tryMetaTag();
-    if (tempBase == $intern_0) {
+    if (tempBase == '') {
       tempBase = tryNocacheJsTag();
     }
-    if (tempBase == $intern_0) {
+    if (tempBase == '') {
       tempBase = tryMarkerScript();
     }
-    if (tempBase == $intern_0) {
+    if (tempBase == '') {
       tempBase = tryBaseTag();
     }
-    if (tempBase == $intern_0 && isLocationOk()) {
-      tempBase = getDirectoryOfFile($doc.location.href);
+    if (tempBase == '' && isLocationOk()) {
+      tempBase = getDirectoryOfFile($doc_0.location.href);
     }
     tempBase = ensureAbsoluteUrl(tempBase);
     base = tempBase;
@@ -129,48 +128,48 @@ function mfp(){
   }
 
   function processMetas(){
-    var metas = document.getElementsByTagName($intern_25);
+    var metas = document.getElementsByTagName('meta');
     for (var i = 0, n = metas.length; i < n; ++i) {
-      var meta = metas[i], name = meta.getAttribute($intern_26), content;
-      if (name) {
-        name = name.replace($intern_27, $intern_0);
-        if (name.indexOf($intern_28) >= 0) {
+      var meta = metas[i], name_0 = meta.getAttribute('name'), content_0;
+      if (name_0) {
+        name_0 = name_0.replace('mfp::', '');
+        if (name_0.indexOf('::') >= 0) {
           continue;
         }
-        if (name == $intern_29) {
-          content = meta.getAttribute($intern_30);
-          if (content) {
-            var value, eq = content.indexOf($intern_31);
+        if (name_0 == 'gwt:property') {
+          content_0 = meta.getAttribute('content');
+          if (content_0) {
+            var value, eq = content_0.indexOf('=');
             if (eq >= 0) {
-              name = content.substring(0, eq);
-              value = content.substring(eq + 1);
+              name_0 = content_0.substring(0, eq);
+              value = content_0.substring(eq + 1);
             }
              else {
-              name = content;
-              value = $intern_0;
+              name_0 = content_0;
+              value = '';
             }
-            metaProps[name] = value;
+            metaProps[name_0] = value;
           }
         }
-         else if (name == $intern_32) {
-          content = meta.getAttribute($intern_30);
-          if (content) {
+         else if (name_0 == 'gwt:onPropertyErrorFn') {
+          content_0 = meta.getAttribute('content');
+          if (content_0) {
             try {
-              propertyErrorFunc = eval(content);
+              propertyErrorFunc = eval(content_0);
             }
              catch (e) {
-              alert($intern_33 + content + $intern_34);
+              alert('Bad handler "' + content_0 + '" for "gwt:onPropertyErrorFn"');
             }
           }
         }
-         else if (name == $intern_35) {
-          content = meta.getAttribute($intern_30);
-          if (content) {
+         else if (name_0 == 'gwt:onLoadErrorFn') {
+          content_0 = meta.getAttribute('content');
+          if (content_0) {
             try {
-              onLoadErrorFunc = eval(content);
+              onLoadErrorFunc = eval(content_0);
             }
              catch (e) {
-              alert($intern_33 + content + $intern_36);
+              alert('Bad handler "' + content_0 + '" for "gwt:onLoadErrorFn"');
             }
           }
         }
@@ -178,8 +177,8 @@ function mfp(){
     }
   }
 
-  function __gwt_getMetaProperty(name){
-    var value = metaProps[name];
+  function __gwt_getMetaProperty(name_0){
+    var value = metaProps[name_0];
     return value == null?null:value;
   }
 
@@ -206,48 +205,48 @@ function mfp(){
     throw null;
   }
 
-  providers[$intern_37] = function(){
+  providers['user.agent'] = function(){
     var ua = navigator.userAgent.toLowerCase();
     var makeVersion = function(result){
       return parseInt(result[1]) * 1000 + parseInt(result[2]);
     }
     ;
     if (function(){
-      return ua.indexOf($intern_38) != -1;
+      return ua.indexOf('opera') != -1;
     }
     ())
-      return $intern_38;
+      return 'opera';
     if (function(){
-      return ua.indexOf($intern_39) != -1;
+      return ua.indexOf('webkit') != -1;
     }
     ())
-      return $intern_40;
+      return 'safari';
     if (function(){
-      return ua.indexOf($intern_41) != -1 && $doc.documentMode >= 9;
+      return ua.indexOf('msie') != -1 && $doc_0.documentMode >= 9;
     }
     ())
-      return $intern_42;
+      return 'ie9';
     if (function(){
-      return ua.indexOf($intern_41) != -1 && $doc.documentMode >= 8;
+      return ua.indexOf('msie') != -1 && $doc_0.documentMode >= 8;
     }
     ())
-      return $intern_43;
+      return 'ie8';
     if (function(){
       var result = /msie ([0-9]+)\.([0-9]+)/.exec(ua);
       if (result && result.length == 3)
         return makeVersion(result) >= 6000;
     }
     ())
-      return $intern_44;
+      return 'ie6';
     if (function(){
-      return ua.indexOf($intern_45) != -1;
+      return ua.indexOf('gecko') != -1;
     }
     ())
-      return $intern_46;
-    return $intern_47;
+      return 'gecko1_8';
+    return 'unknown';
   }
   ;
-  values[$intern_37] = {gecko1_8:0, ie6:1, ie8:2, ie9:3, opera:4, safari:5};
+  values['user.agent'] = {gecko1_8:0, ie6:1, ie8:2, ie9:3, opera:4, safari:5};
   mfp.onScriptLoad = function(gwtOnLoadFunc){
     mfp.onScriptLoad = null;
     gwtOnLoad = gwtOnLoadFunc;
@@ -255,22 +254,22 @@ function mfp(){
   }
   ;
   if (isHostedMode()) {
-    alert($intern_48 + $intern_49);
+    alert('Cross-site hosted mode not yet implemented. See issue ' + 'http://code.google.com/p/google-web-toolkit/issues/detail?id=2079');
     return;
   }
   processMetas();
   computeScriptBase();
-  $stats && $stats({moduleName:$intern_1, sessionId:$sessionId, subSystem:$intern_2, evtGroup:$intern_3, millis:(new Date).getTime(), type:$intern_50});
+  $stats && $stats({moduleName:'mfp', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
   var strongName;
   try {
-    unflattenKeylistIntoAnswers([$intern_46], $intern_51);
-    unflattenKeylistIntoAnswers([$intern_42], $intern_52);
-    unflattenKeylistIntoAnswers([$intern_43], $intern_53);
-    unflattenKeylistIntoAnswers([$intern_44], $intern_54);
-    unflattenKeylistIntoAnswers([$intern_40], $intern_55);
-    unflattenKeylistIntoAnswers([$intern_38], $intern_56);
-    strongName = answers[computePropValue($intern_37)];
-    var idx = strongName.indexOf($intern_57);
+    unflattenKeylistIntoAnswers(['safari'], '3381A3E1D06C7896615C2EB9DE85D5D1');
+    unflattenKeylistIntoAnswers(['ie6'], '7CD60C7A4593CA15E12F68DF64A0D95E');
+    unflattenKeylistIntoAnswers(['ie8'], '8571E999606120183F797DADA8BB69ED');
+    unflattenKeylistIntoAnswers(['gecko1_8'], '949F09DEA28DBDE3334F849547C4E9C0');
+    unflattenKeylistIntoAnswers(['ie9'], 'A37C77D8BEC6D602928F2784E28CBC7B');
+    unflattenKeylistIntoAnswers(['opera'], 'F9E64DC1B1BF3491018B591B08569A72');
+    strongName = answers[computePropValue('user.agent')];
+    var idx = strongName.indexOf(':');
     if (idx != -1) {
       softPermutationId = Number(strongName.substring(idx + 1));
       strongName = strongName.substring(0, idx);
@@ -283,65 +282,65 @@ function mfp(){
   function onBodyDone(){
     if (!bodyDone) {
       bodyDone = true;
-      if (!__gwt_stylesLoaded[$intern_58]) {
-        var l = $doc.createElement($intern_59);
-        __gwt_stylesLoaded[$intern_58] = l;
-        l.setAttribute($intern_60, $intern_61);
-        l.setAttribute($intern_62, $intern_58);
-        $doc.getElementsByTagName($intern_63)[0].appendChild(l);
+      if (!__gwt_stylesLoaded['http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/dojo/dijit/themes/claro/claro.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/dojo/dijit/themes/claro/claro.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', 'http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/dojo/dijit/themes/claro/claro.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
       }
-      if (!__gwt_stylesLoaded[$intern_64]) {
-        var l = $doc.createElement($intern_59);
-        __gwt_stylesLoaded[$intern_64] = l;
-        l.setAttribute($intern_60, $intern_61);
-        l.setAttribute($intern_62, $intern_64);
-        $doc.getElementsByTagName($intern_63)[0].appendChild(l);
+      if (!__gwt_stylesLoaded['http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/esri/css/esri.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/esri/css/esri.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', 'http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/esri/css/esri.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
       }
-      if (!__gwt_stylesLoaded[$intern_65]) {
-        var l = $doc.createElement($intern_59);
-        __gwt_stylesLoaded[$intern_65] = l;
-        l.setAttribute($intern_60, $intern_61);
-        l.setAttribute($intern_62, base + $intern_65);
-        $doc.getElementsByTagName($intern_63)[0].appendChild(l);
+      if (!__gwt_stylesLoaded['GwtGisClient.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['GwtGisClient.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', base + 'GwtGisClient.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
       }
-      if (!__gwt_stylesLoaded[$intern_66]) {
-        var l = $doc.createElement($intern_59);
-        __gwt_stylesLoaded[$intern_66] = l;
-        l.setAttribute($intern_60, $intern_61);
-        l.setAttribute($intern_62, base + $intern_66);
-        $doc.getElementsByTagName($intern_63)[0].appendChild(l);
+      if (!__gwt_stylesLoaded['css/bootstrap.min.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['css/bootstrap.min.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', base + 'css/bootstrap.min.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
       }
-      if (!__gwt_stylesLoaded[$intern_67]) {
-        var l = $doc.createElement($intern_59);
-        __gwt_stylesLoaded[$intern_67] = l;
-        l.setAttribute($intern_60, $intern_61);
-        l.setAttribute($intern_62, base + $intern_67);
-        $doc.getElementsByTagName($intern_63)[0].appendChild(l);
+      if (!__gwt_stylesLoaded['css/bootstrap-responsive.min.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['css/bootstrap-responsive.min.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', base + 'css/bootstrap-responsive.min.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
       }
-      if (!__gwt_stylesLoaded[$intern_68]) {
-        var l = $doc.createElement($intern_59);
-        __gwt_stylesLoaded[$intern_68] = l;
-        l.setAttribute($intern_60, $intern_61);
-        l.setAttribute($intern_62, base + $intern_68);
-        $doc.getElementsByTagName($intern_63)[0].appendChild(l);
+      if (!__gwt_stylesLoaded['css/font-awesome.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['css/font-awesome.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', base + 'css/font-awesome.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
       }
-      if (!__gwt_stylesLoaded[$intern_69]) {
-        var l = $doc.createElement($intern_59);
-        __gwt_stylesLoaded[$intern_69] = l;
-        l.setAttribute($intern_60, $intern_61);
-        l.setAttribute($intern_62, base + $intern_69);
-        $doc.getElementsByTagName($intern_63)[0].appendChild(l);
+      if (!__gwt_stylesLoaded['MyFirePlan.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['MyFirePlan.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', base + 'MyFirePlan.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
       }
-      if (!__gwt_stylesLoaded[$intern_70]) {
-        var l = $doc.createElement($intern_59);
-        __gwt_stylesLoaded[$intern_70] = l;
-        l.setAttribute($intern_60, $intern_61);
-        l.setAttribute($intern_62, base + $intern_70);
-        $doc.getElementsByTagName($intern_63)[0].appendChild(l);
+      if (!__gwt_stylesLoaded['idangerous.swiper.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['idangerous.swiper.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', base + 'idangerous.swiper.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
       }
       maybeStartModule();
-      if ($doc.removeEventListener) {
-        $doc.removeEventListener($intern_71, onBodyDone, false);
+      if ($doc_0.removeEventListener) {
+        $doc_0.removeEventListener('DOMContentLoaded', onBodyDone, false);
       }
       if (onBodyDoneTimerId) {
         clearInterval(onBodyDoneTimerId);
@@ -349,46 +348,46 @@ function mfp(){
     }
   }
 
-  if ($doc.addEventListener) {
-    $doc.addEventListener($intern_71, function(){
+  if ($doc_0.addEventListener) {
+    $doc_0.addEventListener('DOMContentLoaded', function(){
       onBodyDone();
     }
     , false);
   }
   var onBodyDoneTimerId = setInterval(function(){
-    if (/loaded|complete/.test($doc.readyState)) {
+    if (/loaded|complete/.test($doc_0.readyState)) {
       onBodyDone();
     }
   }
   , 50);
-  $stats && $stats({moduleName:$intern_1, sessionId:$sessionId, subSystem:$intern_2, evtGroup:$intern_3, millis:(new Date).getTime(), type:$intern_9});
-  $stats && $stats({moduleName:$intern_1, sessionId:$sessionId, subSystem:$intern_2, evtGroup:$intern_72, millis:(new Date).getTime(), type:$intern_4});
-  if (!__gwt_scriptsLoaded[$intern_73]) {
-    __gwt_scriptsLoaded[$intern_73] = true;
-    document.write($intern_74 + base + $intern_75);
+  $stats && $stats({moduleName:'mfp', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'end'});
+  $stats && $stats({moduleName:'mfp', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'loadExternalRefs', millis:(new Date).getTime(), type:'begin'});
+  if (!__gwt_scriptsLoaded['js/esri_3_4_patch.js']) {
+    __gwt_scriptsLoaded['js/esri_3_4_patch.js'] = true;
+    document.write('<script language="javascript" src="' + base + 'js/esri_3_4_patch.js"><\/script>');
   }
-  if (!__gwt_scriptsLoaded[$intern_76]) {
-    __gwt_scriptsLoaded[$intern_76] = true;
-    document.write($intern_77);
+  if (!__gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js']) {
+    __gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'] = true;
+    document.write('<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><\/script>');
   }
-  if (!__gwt_scriptsLoaded[$intern_78]) {
-    __gwt_scriptsLoaded[$intern_78] = true;
-    document.write($intern_79);
+  if (!__gwt_scriptsLoaded['https://apis.google.com/js/client.js?onload=ginit']) {
+    __gwt_scriptsLoaded['https://apis.google.com/js/client.js?onload=ginit'] = true;
+    document.write('<script language="javascript" src="https://apis.google.com/js/client.js?onload=ginit"><\/script>');
   }
-  if (!__gwt_scriptsLoaded[$intern_80]) {
-    __gwt_scriptsLoaded[$intern_80] = true;
-    document.write($intern_74 + base + $intern_81);
+  if (!__gwt_scriptsLoaded['js/bootstrap.min.js']) {
+    __gwt_scriptsLoaded['js/bootstrap.min.js'] = true;
+    document.write('<script language="javascript" src="' + base + 'js/bootstrap.min.js"><\/script>');
   }
-  if (!__gwt_scriptsLoaded[$intern_82]) {
-    __gwt_scriptsLoaded[$intern_82] = true;
-    document.write($intern_74 + base + $intern_83);
+  if (!__gwt_scriptsLoaded['idangerous.swiper-1.9.min.js']) {
+    __gwt_scriptsLoaded['idangerous.swiper-1.9.min.js'] = true;
+    document.write('<script language="javascript" src="' + base + 'idangerous.swiper-1.9.min.js"><\/script>');
   }
-  if (!__gwt_scriptsLoaded[$intern_84]) {
-    __gwt_scriptsLoaded[$intern_84] = true;
-    document.write($intern_74 + base + $intern_85);
+  if (!__gwt_scriptsLoaded['jquery.esriPreview.js']) {
+    __gwt_scriptsLoaded['jquery.esriPreview.js'] = true;
+    document.write('<script language="javascript" src="' + base + 'jquery.esriPreview.js"><\/script>');
   }
-  var compiledScriptTag = $intern_86 + base + strongName + $intern_87;
-  $doc.write($intern_88 + $intern_89 + $intern_90 + $intern_91 + $intern_92 + $intern_93 + $intern_94 + $intern_91 + $intern_92 + $intern_95 + $intern_96 + $intern_97 + compiledScriptTag + $intern_98 + $intern_99 + $intern_100 + $intern_101);
+  var compiledScriptTag = '"<script src=\\"' + base + strongName + '.cache.js\\"><\/scr" + "ipt>"';
+  $doc_0.write('<scr' + 'ipt><!-' + '-\n' + 'window.__gwtStatsEvent && window.__gwtStatsEvent({' + 'moduleName:"mfp", sessionId:window.__gwtStatsSessionId, subSystem:"startup",' + 'evtGroup: "loadExternalRefs", millis:(new Date()).getTime(),' + 'type: "end"});' + 'window.__gwtStatsEvent && window.__gwtStatsEvent({' + 'moduleName:"mfp", sessionId:window.__gwtStatsSessionId, subSystem:"startup",' + 'evtGroup: "moduleStartup", millis:(new Date()).getTime(),' + 'type: "moduleRequested"});' + 'document.write(' + compiledScriptTag + ');' + '\n-' + '-><\/scr' + 'ipt>');
 }
 
 mfp();
